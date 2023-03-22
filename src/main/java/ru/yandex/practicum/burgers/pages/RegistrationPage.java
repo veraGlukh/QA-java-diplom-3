@@ -2,7 +2,6 @@ package ru.yandex.practicum.burgers.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import java.util.concurrent.TimeUnit;
 
 public class RegistrationPage {
 
@@ -40,7 +39,6 @@ public class RegistrationPage {
 
     // Метод заполнения поля Имя
     public RegistrationPage setName(String name) {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.findElement(nameInput).sendKeys(name);
         return this;
     }
@@ -71,7 +69,6 @@ public class RegistrationPage {
 
     // Метод проверки отображения надписи Некорректный пароль
     public boolean isIncorrectPasswordTitleDisplayed() {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         return driver.findElement(incorrectPasswordTitle).isDisplayed();
     }
 }

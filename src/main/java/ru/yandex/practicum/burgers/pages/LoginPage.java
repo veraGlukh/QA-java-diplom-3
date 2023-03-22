@@ -2,7 +2,6 @@ package ru.yandex.practicum.burgers.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import java.util.concurrent.TimeUnit;
 
 public class LoginPage {
@@ -54,7 +53,6 @@ public class LoginPage {
     // Метод проверки отображения надписи вход
 
     public boolean isEnterTitleDisplayed() {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         return driver.findElement(enterTitle).isDisplayed();
     }
 

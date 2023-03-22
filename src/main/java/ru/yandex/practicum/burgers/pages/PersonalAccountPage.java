@@ -2,7 +2,6 @@ package ru.yandex.practicum.burgers.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import java.util.concurrent.TimeUnit;
 
 public class PersonalAccountPage {
 
@@ -27,7 +26,6 @@ public class PersonalAccountPage {
 
     // Метод проверки отображения указателя Профиль
     public boolean isProfileButtonDisplayed() {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         return driver.findElement(profileButton).isDisplayed();
     }
 

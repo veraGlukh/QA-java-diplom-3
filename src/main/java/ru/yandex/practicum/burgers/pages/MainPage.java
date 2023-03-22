@@ -2,7 +2,6 @@ package ru.yandex.practicum.burgers.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import java.util.concurrent.TimeUnit;
 
 public class MainPage {
 
@@ -42,27 +41,23 @@ public class MainPage {
 
     // Метод клика по кнопке Личный кабинет
     public MainPage clickPersonalAccountButton() {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS); // ожидание загрузки кнопки
         driver.findElement(personalAccountButton).click();
         return this;
     }
 
     // Метод клика по кнопке Войти в аккаунт
     public MainPage clickEnterAccountButton() {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS); // ожидание загрузки кнопки
         driver.findElement(enterAccountButton).click();
         return this;
     }
 
     // Метод проверки отображения надписи Соберите бургер
     public boolean isSetBuggerTitleDisplayed() {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         return driver.findElement(setBuggerTitle).isDisplayed();
     }
 
     // Метод клика по указателю Булки
     public MainPage clickBunsPointer() {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.findElement(bunsPointer).click();
         return this;
     }
@@ -74,7 +69,6 @@ public class MainPage {
 
     // Метод клика по указателю Соусы
     public MainPage clickSaucesPointer() {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.findElement(saucesPointer).click();
         return this;
     }
@@ -86,7 +80,6 @@ public class MainPage {
 
     // Метод клика по указателю Начинки
     public MainPage clickFillingsPointer() {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.findElement(saucesPointer).click();
         return this;
     }
